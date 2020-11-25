@@ -1,0 +1,8 @@
+<input type="text" (keyup.enter)="add(course)" #course>
+<ul>
+  <li *ngFor="let course of courses | keyvalue">
+     {{course.value.name}} - {{course.value.key}}
+    <button (click)="update(course.value.key)">Update</button>
+    <button (click)="delete(course.value.key)">Delete</button>
+  </li>
+</ul>
